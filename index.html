@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sihar Pangaribuan | Data Analyst & Data Engineer</title>
+    <meta name="description" content="Portfolio of Sihar Pangaribuan — Data Analyst & Data Engineer with 2+ years experience in SQL, Python, ETL pipelines, AWS, and data visualization.">
+    <meta property="og:title" content="Sihar Pangaribuan | Data Analyst & Data Engineer">
+    <meta property="og:description" content="Portfolio — Data Analyst & Data Engineer specializing in SQL, Python, ETL, and data pipeline engineering.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
     <!-- Tailwind CSS for rapid styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -30,7 +36,6 @@
     </script>
 
     <style>
-        /* Custom CSS for interactive elements without JS */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
@@ -39,6 +44,82 @@
         /* Mobile Menu Checkbox Hack */
         #menu-toggle:checked + #mobile-menu {
             display: block;
+        }
+
+        /* === Dark Mode === */
+        html, body, section, nav, footer, div, a, h1, h2, h3, h4, p, span, ul, li, i, button, input, label {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        [data-theme="dark"] body,
+        [data-theme="dark"] .bg-white,
+        [data-theme="dark"] .hover-card.bg-white {
+            background-color: #1e293b !important;
+        }
+        [data-theme="dark"] section.bg-slate-50,
+        [data-theme="dark"] #experience,
+        [data-theme="dark"] #education {
+            background-color: #0f172a !important;
+        }
+        [data-theme="dark"] nav.bg-white\/90 {
+            background-color: rgba(30, 41, 59, 0.9) !important;
+            border-color: #334155 !important;
+        }
+        [data-theme="dark"] .text-primary,
+        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+        [data-theme="dark"] h4, [data-theme="dark"] .text-slate-800 {
+            color: #f1f5f9 !important;
+        }
+        [data-theme="dark"] .text-slate-600 {
+            color: #94a3b8 !important;
+        }
+        [data-theme="dark"] .text-slate-400 {
+            color: #64748b !important;
+        }
+        [data-theme="dark"] .text-slate-500 {
+            color: #64748b !important;
+        }
+        [data-theme="dark"] .border-slate-100,
+        [data-theme="dark"] .border-slate-200 {
+            border-color: #334155 !important;
+        }
+        [data-theme="dark"] .bg-slate-100 {
+            background-color: #334155 !important;
+        }
+        [data-theme="dark"] .hover-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3) !important;
+        }
+        [data-theme="dark"] #mobile-menu {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+        }
+        [data-theme="dark"] #mobile-menu a {
+            color: #94a3b8 !important;
+        }
+        [data-theme="dark"] #mobile-menu a:hover {
+            color: #38bdf8 !important;
+            background-color: #334155 !important;
+        }
+        [data-theme="dark"] .timeline-container::before {
+            background: #334155 !important;
+        }
+        [data-theme="dark"] .timeline-content.bg-white {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+        }
+        [data-theme="dark"] .hover-card.bg-white {
+            border-color: #334155 !important;
+        }
+        [data-theme="dark"] .bg-slate-50 {
+            background-color: #1e293b !important;
+        }
+        [data-theme="dark"] .text-slate-300 {
+            color: #94a3b8 !important;
+        }
+        [data-theme="dark"] .border-slate-700 {
+            border-color: #475569 !important;
+        }
+        [data-theme="dark"] .bg-slate-800 {
+            background-color: #334155 !important;
         }
 
         /* Timeline styling */
@@ -95,6 +176,9 @@
             box-shadow: 0 0 0 2px #38bdf8;
             z-index: 10;
         }
+        [data-theme="dark"] .timeline-dot {
+            border-color: #1e293b !important;
+        }
 
         /* Hover effects */
         .hover-card {
@@ -105,13 +189,108 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
 
-        .skill-badge {
+        /* === Typing Animation === */
+        .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.1em;
+            background-color: #38bdf8;
+            margin-left: 2px;
+            vertical-align: text-bottom;
+            animation: blink 0.7s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* === Scroll-to-Top === */
+        #scroll-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #38bdf8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+            z-index: 100;
+        }
+        #scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        #scroll-top:hover {
+            background-color: #0284c7;
+        }
+
+        /* === Project Filter Tabs === */
+        .filter-tab {
+            padding: 8px 20px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            background-color: transparent;
+            color: #64748b;
+            cursor: pointer;
             transition: all 0.2s ease;
         }
-        .skill-badge:hover {
-            background-color: #0284c7;
+        .filter-tab:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+        .filter-tab.active {
+            background-color: #38bdf8;
+            border-color: #38bdf8;
             color: white;
-            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+        [data-theme="dark"] .filter-tab {
+            border-color: #475569;
+            color: #94a3b8;
+        }
+        [data-theme="dark"] .filter-tab:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+        [data-theme="dark"] .filter-tab.active {
+            background-color: #38bdf8;
+            border-color: #38bdf8;
+            color: #0f172a;
+        }
+        .project-card {
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .project-card.hidden-filter {
+            display: none;
+        }
+
+        /* === Skill Progress Bars === */
+        .skill-bar-track {
+            width: 100%;
+            height: 8px;
+            background-color: #334155;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .skill-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #38bdf8, #0284c7);
+            border-radius: 4px;
+            transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
     </style>
 </head>
@@ -126,12 +305,15 @@
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex items-center space-x-8">
                     <a href="#about" class="text-slate-600 hover:text-secondary transition font-medium text-sm">About</a>
                     <a href="#experience" class="text-slate-600 hover:text-secondary transition font-medium text-sm">Experience</a>
                     <a href="#projects" class="text-slate-600 hover:text-secondary transition font-medium text-sm">Projects</a>
                     <a href="#skills" class="text-slate-600 hover:text-secondary transition font-medium text-sm">Skills</a>
                     <a href="#education" class="text-slate-600 hover:text-secondary transition font-medium text-sm">Education</a>
+                    <button id="dark-toggle-desktop" class="text-slate-600 hover:text-secondary transition text-lg" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </div>
 
                 <!-- Mobile Menu Button (CSS Only) -->
@@ -152,6 +334,9 @@
                 <a href="#projects" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-secondary hover:bg-slate-50 rounded-md">Projects</a>
                 <a href="#skills" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-secondary hover:bg-slate-50 rounded-md">Skills</a>
                 <a href="#education" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-secondary hover:bg-slate-50 rounded-md">Education</a>
+                <button id="dark-toggle-mobile" class="flex items-center w-full px-3 py-2 text-base font-medium text-slate-600 hover:text-secondary hover:bg-slate-50 rounded-md" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon mr-3"></i> Dark Mode
+                </button>
             </div>
         </div>
     </nav>
@@ -176,8 +361,8 @@
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4">
                     Sihar <span class="text-secondary">Pangaribuan</span>
                 </h1>
-                <h2 class="text-xl sm:text-2xl font-medium text-slate-300 mb-6">
-                    Data Analyst | Data Engineer
+                <h2 class="text-xl sm:text-2xl font-medium text-slate-300 mb-6 h-8 sm:h-10">
+                    <span id="typing-text"></span><span class="typing-cursor"></span>
                 </h2>
                 
                 <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-400 mb-8">
@@ -190,7 +375,7 @@
                     <a href="#contact" class="px-6 py-3 bg-secondary hover:bg-accent text-white font-medium rounded-lg transition shadow-lg shadow-secondary/30">
                         Contact Me
                     </a>
-                    <a href="https://www.linkedin.com/in/sihar-pangaribuan-43525a249/" target="_blank" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition border border-slate-700">
+                    <a href="https://www.linkedin.com/in/sihar-pangaribuan-43525a249/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg transition border border-slate-700">
                         <i class="fab fa-linkedin mr-2"></i> LinkedIn
                     </a>
                 </div>
@@ -230,7 +415,7 @@
                     <div class="timeline-content hover-card bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative w-full sm:w-[90%] md:w-[85%] lg:w-[80%] inline-block">
                         <span class="inline-block py-1 px-3 rounded-full bg-slate-100 text-secondary font-semibold text-sm mb-3">Feb 2024 - Present</span>
                         <h3 class="text-xl font-bold text-primary">Data Analyst</h3>
-                        <h4 class="text-md font-medium text-slate-500 mb-4">PT. Dua Surya Dinamika - Jakarta, Indonesia</h4>
+                        <h4 class="text-base font-medium text-slate-500 mb-4">PT. Dua Surya Dinamika - Jakarta, Indonesia</h4>
                         <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm text-left">
                             <li>Create and maintain SQL queries to extract and manage data from databases.</li>
                             <li>Analyze data, generate insights, and develop reports to support decision-making.</li>
@@ -259,7 +444,7 @@
                     <div class="timeline-content hover-card bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative w-full sm:w-[90%] md:w-[85%] lg:w-[80%] inline-block">
                         <span class="inline-block py-1 px-3 rounded-full bg-slate-100 text-secondary font-semibold text-sm mb-3">Sep 2023 - Oct 2023</span>
                         <h3 class="text-xl font-bold text-primary">Data Analyst</h3>
-                        <h4 class="text-md font-medium text-slate-500 mb-4">Huawei Indonesia - Jakarta, Indonesia</h4>
+                        <h4 class="text-base font-medium text-slate-500 mb-4">Huawei Indonesia - Jakarta, Indonesia</h4>
                         <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm text-left">
                             <li>Analyze application performance: Dive deep into top apps across regions, uncovering trends in usage, data consumption, and user demographics.</li>
                             <li>Tame Smart Care alarms: Investigate and resolve critical system alerts, ensuring smooth operation and optimal service delivery.</li>
@@ -280,7 +465,7 @@
                     <div class="timeline-content hover-card bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative w-full sm:w-[90%] md:w-[85%] lg:w-[80%] inline-block">
                         <span class="inline-block py-1 px-3 rounded-full bg-slate-100 text-secondary font-semibold text-sm mb-3">Aug 2023</span>
                         <h3 class="text-xl font-bold text-primary">Data Engineer (Project-Based)</h3>
-                        <h4 class="text-md font-medium text-slate-500 mb-4">IDX Partners x Rakamin Academy - Remote</h4>
+                        <h4 class="text-base font-medium text-slate-500 mb-4">IDX Partners x Rakamin Academy - Remote</h4>
                         <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm text-left">
                             <li>Processed and transformed data using SQL Server Management Studio to ensure accuracy, consistency, and accessibility.</li>
                             <li>Designed and built ETL pipelines using Talend to integrate data from multiple sources.</li>
@@ -301,7 +486,7 @@
                     <div class="timeline-content hover-card bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative w-full sm:w-[90%] md:w-[85%] lg:w-[80%] inline-block">
                         <span class="inline-block py-1 px-3 rounded-full bg-slate-100 text-secondary font-semibold text-sm mb-3">Jul 2023</span>
                         <h3 class="text-xl font-bold text-primary">Data Scientist (Project-Based)</h3>
-                        <h4 class="text-md font-medium text-slate-500 mb-4">Kalbe Nutritionals x Rakamin Academy - Remote</h4>
+                        <h4 class="text-base font-medium text-slate-500 mb-4">Kalbe Nutritionals x Rakamin Academy - Remote</h4>
                         <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm text-left">
                             <li>Developed interactive dashboards in Tableau to visualize data effectively.</li>
                             <li>Predicted daily product sales volumes with high accuracy using Time Series Regression models.</li>
@@ -316,7 +501,7 @@
                     <div class="timeline-content hover-card bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative w-full sm:w-[90%] md:w-[85%] lg:w-[80%] inline-block">
                         <span class="inline-block py-1 px-3 rounded-full bg-slate-100 text-secondary font-semibold text-sm mb-3">Oct 2019 - Feb 2023</span>
                         <h3 class="text-xl font-bold text-primary">Radio Frequency Engineer</h3>
-                        <h4 class="text-md font-medium text-slate-500 mb-4">PT. Sinergi Aitikom - Jakarta, Indonesia</h4>
+                        <h4 class="text-base font-medium text-slate-500 mb-4">PT. Sinergi Aitikom - Jakarta, Indonesia</h4>
                         <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm text-left">
                             <li>Perform analysis and reporting of the results of checking telecommunication signals.</li>
                         </ul>
@@ -330,21 +515,50 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-primary mb-16 relative">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12 relative">
                 Featured Projects
                 <span class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-secondary rounded"></span>
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="data-engineering">Data Engineering</button>
+                <button class="filter-tab" data-filter="data-science">Data Science</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
                 
                 <!-- Project 1 -->
-                <div class="hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full">
+                <div class="project-card hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full" data-category="data-engineering">
+                    <div class="p-6 flex-grow">
+                        <div class="w-12 h-12 bg-slate-50 rounded-lg flex items-center justify-center text-accent text-2xl mb-4">
+                            <i class="fas fa-tower-broadcast"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3">
+                            <a href="https://github.com/siharp/end-to-end-datapipeline" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
+                                        End-to-End Modern Data Pipeline
+                            </a>
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-4">Built a Modern Data Stack for Olist E-Commerce Analytics: ELT pipeline from PostgreSQL to MinIO (Parquet) to ClickHouse, transformed with dbt, orchestrated by Airflow, and visualized in Apache Superset — all containerized with Docker.</p>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex flex-wrap gap-2">
+                        <span class="text-xs bg-white border border-slate-200 text-slate-600 px-2 py-1 rounded">Airflow</span>
+                        <span class="text-xs bg-white border border-slate-200 text-slate-600 px-2 py-1 rounded">ClickHouse</span>
+                        <span class="text-xs bg-white border border-slate-200 text-slate-600 px-2 py-1 rounded">dbt</span>
+                        <span class="text-xs bg-white border border-slate-200 text-slate-600 px-2 py-1 rounded">Docker</span>
+                        <span class="text-xs bg-white border border-slate-200 text-slate-600 px-2 py-1 rounded">Superset</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full" data-category="data-engineering">
                     <div class="p-6 flex-grow">
                         <div class="w-12 h-12 bg-slate-50 rounded-lg flex items-center justify-center text-accent text-2xl mb-4">
                             <i class="fas fa-database"></i>
                         </div>
                         <h3 class="text-xl font-bold text-primary mb-3">
-                            <a href="https://github.com/siharpangaribuan/airflow-docker" target="_blank" class="hover:text-secondary transition">
+                            <a href="https://github.com/siharpangaribuan/airflow-docker" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                         MongoDB to PostgreSQL ETL Pipeline
                             </a>
                         </h3>
@@ -358,14 +572,14 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full">
+                <!-- Project 3 -->
+                <div class="project-card hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full" data-category="data-engineering">
                     <div class="p-6 flex-grow">
                         <div class="w-12 h-12 bg-slate-50 rounded-lg flex items-center justify-center text-accent text-2xl mb-4">
                             <i class="fas fa-plane-departure"></i>
                         </div>
                         <h3 class="text-xl font-bold text-primary mb-3">
-                            <a href="https://github.com/siharp/web-scraping-docker-selenium-grid" target="_blank" class="hover:text-secondary transition">
+                            <a href="https://github.com/siharp/web-scraping-docker-selenium-grid" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                         FlightRadar Scraper
                             </a>
                         </h3>
@@ -378,14 +592,14 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full">
+                <!-- Project 4 -->
+                <div class="project-card hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full" data-category="data-engineering">
                     <div class="p-6 flex-grow">
                         <div class="w-12 h-12 bg-slate-50 rounded-lg flex items-center justify-center text-accent text-2xl mb-4">
                             <i class="fas fa-project-diagram"></i>
                         </div>
                         <h3 class="text-xl font-bold text-primary mb-3">
-                            <a href="https://github.com/siharp/Data_engineer_IDX_Virtual_Intership" target="_blank" class="hover:text-secondary transition">
+                            <a href="https://github.com/siharp/Data_engineer_IDX_Virtual_Intership" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                         ETL Pipeline Using Talend
                             </a>
                         </h3>
@@ -398,14 +612,14 @@
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full">
+                <!-- Project 5 -->
+                <div class="project-card hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full" data-category="data-science">
                     <div class="p-6 flex-grow">
                         <div class="w-12 h-12 bg-slate-50 rounded-lg flex items-center justify-center text-accent text-2xl mb-4">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h3 class="text-xl font-bold text-primary mb-3">
-                            <a href="https://github.com/siharp/Kalbe_Data_science_virtual_internship" target="_blank" class="hover:text-secondary transition">
+                            <a href="https://github.com/siharp/Kalbe_Data_science_virtual_internship" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                     Kalbe Sales Analysis & Forecasting
                             </a>
                         </h3>
@@ -418,14 +632,14 @@
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full">
+                <!-- Project 6 -->
+                <div class="project-card hover-card bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full" data-category="data-science">
                     <div class="p-6 flex-grow">
                         <div class="w-12 h-12 bg-slate-50 rounded-lg flex items-center justify-center text-accent text-2xl mb-4">
                             <i class="fas fa-credit-card"></i>
                         </div>
                         <h3 class="text-xl font-bold text-primary mb-3">
-                            <a href="https://github.com/siharp/Supervised_Learning" target="_blank" class="hover:text-secondary transition">
+                            <a href="https://github.com/siharp/Supervised_Learning" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                     Credit Card Default Prediction
                             </a>
                         </h3>
@@ -451,83 +665,77 @@
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Skill Group -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <h3 class="text-lg font-semibold text-secondary mb-4 flex items-center">
                         <i class="fas fa-code mr-2"></i> Programming & Wrangling
                     </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Python (Pandas, Polars, DuckDB)</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">SQL (PostgreSQL, MySQL, MS SQL)</span>
+                    <div class="space-y-3">
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Python (Pandas, Polars, DuckDB)</span><span class="text-xs text-slate-400">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">SQL (PostgreSQL, MySQL, MS SQL)</span><span class="text-xs text-slate-400">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
                     </div>
                 </div>
 
-                <!-- Skill Group -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <h3 class="text-lg font-semibold text-secondary mb-4 flex items-center">
                         <i class="fas fa-chart-pie mr-2"></i> Data Visualization
                     </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Power BI</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Tableau</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Looker Studio</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Metabase</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Redash</span>
+                    <div class="space-y-3">
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Power BI</span><span class="text-xs text-slate-400">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Tableau</span><span class="text-xs text-slate-400">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Looker Studio</span><span class="text-xs text-slate-400">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Metabase</span><span class="text-xs text-slate-400">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Redash</span><span class="text-xs text-slate-400">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
                     </div>
                 </div>
 
-                <!-- Skill Group -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <h3 class="text-lg font-semibold text-secondary mb-4 flex items-center">
                         <i class="fas fa-cogs mr-2"></i> Data Engineering
                     </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Apache Airflow</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Docker</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">dbt</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Airbyte</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Talend</span>
+                    <div class="space-y-3">
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Apache Airflow</span><span class="text-xs text-slate-400">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Docker</span><span class="text-xs text-slate-400">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">dbt</span><span class="text-xs text-slate-400">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Airbyte</span><span class="text-xs text-slate-400">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Talend</span><span class="text-xs text-slate-400">65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div></div>
                     </div>
                 </div>
 
-                <!-- Skill Group -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <h3 class="text-lg font-semibold text-secondary mb-4 flex items-center">
                         <i class="fas fa-cloud mr-2"></i> Cloud & Warehousing
                     </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">AWS Services</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">AWS Compute</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Redshift</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Google BigQuery</span>
+                    <div class="space-y-3">
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">AWS Services</span><span class="text-xs text-slate-400">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">AWS Compute</span><span class="text-xs text-slate-400">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Redshift</span><span class="text-xs text-slate-400">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Google BigQuery</span><span class="text-xs text-slate-400">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
                     </div>
                 </div>
 
-                <!-- Skill Group -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <h3 class="text-lg font-semibold text-secondary mb-4 flex items-center">
                         <i class="fas fa-brain mr-2"></i> Machine Learning
                     </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Scikit-learn</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">TensorFlow</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Regression / Classification</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Time Series</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Deep Learning</span>
+                    <div class="space-y-3">
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Scikit-learn</span><span class="text-xs text-slate-400">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">TensorFlow</span><span class="text-xs text-slate-400">65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Regression / Classification</span><span class="text-xs text-slate-400">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Time Series</span><span class="text-xs text-slate-400">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Deep Learning</span><span class="text-xs text-slate-400">60%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div></div>
                     </div>
                 </div>
 
-                <!-- Skill Group -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <h3 class="text-lg font-semibold text-secondary mb-4 flex items-center">
                         <i class="fas fa-spider mr-2"></i> Web Scraping & Others
                     </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">BeautifulSoup</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Selenium</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Scrapy</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">GitHub</span>
-                        <span class="skill-badge bg-slate-700 px-3 py-1.5 rounded-lg text-sm cursor-default">Streamlit</span>
+                    <div class="space-y-3">
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">BeautifulSoup</span><span class="text-xs text-slate-400">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Selenium</span><span class="text-xs text-slate-400">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Scrapy</span><span class="text-xs text-slate-400">65%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">GitHub</span><span class="text-xs text-slate-400">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span class="text-sm text-slate-300">Streamlit</span><span class="text-xs text-slate-400">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div></div>
                     </div>
                 </div>
             </div>
@@ -590,7 +798,7 @@
                             <i class="fas fa-award text-secondary mt-1 mr-4 text-xl"></i>
                             <div>
                                 <h4 class="font-bold text-slate-800">
-                                    <a href="https://www.credly.com/badges/bdd29863-f60d-455a-9e4c-cf05f2670aa5/public_url" target="_blank" class="hover:text-secondary transition">
+                                    <a href="https://www.credly.com/badges/bdd29863-f60d-455a-9e4c-cf05f2670aa5/public_url" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                         AWS Certified Cloud Practitioner
                                     </a>
                                 </h4>
@@ -601,7 +809,7 @@
                             <i class="fas fa-award text-secondary mt-1 mr-4 text-xl"></i>
                             <div>
                                 <h4 class="font-bold text-slate-800">
-                                    <a href="https://www.credly.com/badges/7933fa57-0393-4e5d-aac6-dd24afd1320a/public_url" target="_blank" class="hover:text-secondary transition">
+                                    <a href="https://www.credly.com/badges/7933fa57-0393-4e5d-aac6-dd24afd1320a/public_url" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                         AWS re/Start Graduate
                                     </a>
                                 </h4>
@@ -611,7 +819,7 @@
                             <i class="fas fa-medal text-secondary mt-1 mr-4 text-xl"></i>
                             <div>
                                 <h4 class="font-bold text-slate-800">
-                                    <a href="https://www.udemy.com/certificate/UC-4fd4e913-f3a9-472e-aa76-4a63ab73b630" target="_blank" class="hover:text-secondary transition">
+                                    <a href="https://www.udemy.com/certificate/UC-4fd4e913-f3a9-472e-aa76-4a63ab73b630" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                         The Complete Hands-on Introduction to Airbyte.
                                     </a>
                                 </h4>
@@ -628,7 +836,7 @@
                             <i class="fas fa-award text-secondary mt-1 mr-4 text-xl"></i>
                             <div>
                                 <h4 class="font-bold text-slate-800">
-                                    <a href="https://drive.google.com/file/d/1VH__xq6XPE91sugqKRr29xVYo5PpR7p6/view?usp=drive_link" target="_blank" class="hover:text-secondary transition">
+                                    <a href="https://drive.google.com/file/d/1VH__xq6XPE91sugqKRr29xVYo5PpR7p6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                         Bootcamp Data Science Graduate
                                     </a>
                                 </h4>
@@ -639,7 +847,7 @@
                             <i class="fas fa-medal text-secondary mt-1 mr-4 text-xl"></i>
                             <div>
                                 <h4 class="font-bold text-slate-800">
-                                    <a href="https://www.hackerrank.com/certificates/6de1df45f0bb" target="_blank" class="hover:text-secondary transition">
+                                    <a href="https://www.hackerrank.com/certificates/6de1df45f0bb" target="_blank" rel="noopener noreferrer" class="hover:text-secondary transition">
                                         HackerRank - SQL (Advanced)
                                     </a>
                                     
@@ -674,13 +882,13 @@
 
             <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-slate-500 text-sm mb-4 md:mb-0">
-                    &copy; 2024 Sihar Pangaribuan. All rights reserved.
+                    &copy; 2026 Sihar Pangaribuan. All rights reserved.
                 </p>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-slate-400 hover:text-white transition w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center">
+                    <a href="https://www.linkedin.com/in/sihar-pangaribuan-43525a249/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/siharp" target="_blank" class="text-slate-400 hover:text-white transition w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center">
+                    <a href="https://github.com/siharp" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -688,5 +896,88 @@
         </div>
     </footer>
 
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // === Dark Mode Toggle ===
+            var html = document.documentElement;
+            var darkDesktop = document.getElementById('dark-toggle-desktop');
+            var darkMobile = document.getElementById('dark-toggle-mobile');
+            var saved = localStorage.getItem('theme') || 'light';
+            html.setAttribute('data-theme', saved);
+            updateIcons(saved);
+
+            function toggleDark() {
+                var cur = html.getAttribute('data-theme');
+                var next = cur === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                updateIcons(next);
+            }
+
+            function updateIcons(theme) {
+                var cls = theme === 'dark' ? 'fa-sun' : 'fa-moon';
+                document.querySelectorAll('#dark-toggle-desktop i, #dark-toggle-mobile i').forEach(function (el) {
+                    el.className = 'fas ' + cls;
+                });
+            }
+
+            darkDesktop.addEventListener('click', toggleDark);
+            darkMobile.addEventListener('click', toggleDark);
+
+            // === Typing Animation ===
+            var words = ['Data Analyst', 'Data Engineer', 'Data Enthusiast'];
+            var wi = 0, ci = 0, del = false;
+            var el = document.getElementById('typing-text');
+
+            function type() {
+                var w = words[wi];
+                el.textContent = del ? w.substring(0, ci - 1) : w.substring(0, ci + 1);
+                del ? ci-- : ci++;
+                if (!del && ci === w.length) { del = true; setTimeout(type, 2000); return; }
+                if (del && ci === 0) { del = false; wi = (wi + 1) % words.length; setTimeout(type, 500); return; }
+                setTimeout(type, del ? 50 : 100);
+            }
+            type();
+
+            // === Scroll-to-Top ===
+            var scrollBtn = document.getElementById('scroll-top');
+            window.addEventListener('scroll', function () {
+                scrollBtn.classList.toggle('visible', window.scrollY > 300);
+            });
+            scrollBtn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // === Project Filter ===
+            var tabs = document.querySelectorAll('.filter-tab');
+            var cards = document.querySelectorAll('.project-card');
+            tabs.forEach(function (t) {
+                t.addEventListener('click', function () {
+                    tabs.forEach(function (x) { x.classList.remove('active'); });
+                    this.classList.add('active');
+                    var f = this.dataset.filter;
+                    cards.forEach(function (c) {
+                        c.classList.toggle('hidden-filter', f !== 'all' && c.dataset.category !== f);
+                    });
+                });
+            });
+
+            // === Skill Progress Bars Animation ===
+            var bars = document.querySelectorAll('.skill-bar-fill');
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.dataset.width + '%';
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            bars.forEach(function (b) { obs.observe(b); });
+        });
+    </script>
 </body>
 </html>
